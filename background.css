@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:not(i) {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #1e3a8a; /* Deep blue background */
+}
+.container {
+    background-color: #ffffff;
+    background-image: url('https://source.unsplash.com/random/600x400?abstract,blue'); /* Subtle abstract blue pattern */
+    background-size: cover;
+    background-opacity: 0.3; /* Semi-transparent for readability */
+    width: 90vmin;
+    max-width: 600px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-box input {
+    padding: 8px;
+    width: 70%;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #3b82f6; /* Blue border */
+    font-size: 16px;
+}
+.search-box button {
+    padding: 12px 0;
+    width: 25%;
+    background-color: #3b82f6; /* Blue button */
+    border: none;
+    outline: none;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.search-box button:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+}
+.result {
+    position: relative;
+}
+.result h3 {
+    font-size: 28px;
+    color: #1e3a8a; /* Dark blue for headings */
+}
+.result .word {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.result button {
+    background-color: transparent;
+    color: #3b82f6; /* Blue for audio button */
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.result button:hover {
+    color: #2563eb;
+}
+.result .details {
+    display: flex;
+    gap: 12px;
+    color: #6b7280; /* Gray for details */
+    margin: 8px 0 20px 0;
+    font-size: 14px;
+}
+.word-meaning {
+    color: #374151; /* Darker gray for meaning */
+    margin-bottom: 12px;
+}
+.word-example {
+    color: #374151;
+    font-style: italic;
+    border-left: 5px solid #3b82f6; /* Blue border for example */
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.error {
+    margin-top: 60px;
+    text-align: center;
+    color: #dc2626; /* Red for errors */
+}
+.loader {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #3b82f6; /* Blue for loader */
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 15px;
+    }
+    .result h3 {
+        font-size: 22px;
+    }
+    .search-box button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
