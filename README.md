@@ -78,7 +78,7 @@ Setup Instructions
 
 Clone the Repository:
 
-git clone https://github.com/your-username/dictionary-web-app.git
+git clone [https://github.com/your-username/dictionary-web-app.git](https://github.com/roshelle-en/English-Dictionary-Web-App.git)
 cd dictionary-web-app
 
 
